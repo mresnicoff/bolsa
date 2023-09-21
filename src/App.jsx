@@ -6,7 +6,7 @@ const App = () => {
     <div className="w-[90%] m-auto ">
     <Navbar/>
     <Search/>
-    {/* <Jobs/> */}
+    <Jobs/>
     {/* <Value/> */}
     {/* <Footer/> */}
 

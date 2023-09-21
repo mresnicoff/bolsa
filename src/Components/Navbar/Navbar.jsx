@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className=' w-full navbar flex justify-between items-center pt-8 pb-8'>
       <div className="text-xl ">
-        <a href="#">
+        <a href="/">
           <h1 className="font-medium"><strong className='text-[#2a68ff] font-extrabold mr-0.5'>Job</strong>Portal</h1>
         </a>
       </div>
