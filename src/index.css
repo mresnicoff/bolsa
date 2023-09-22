@@ -6,6 +6,7 @@
 
 :root{
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -29,4 +30,9 @@ li>a:hover::before{
   width: 100%;
   height: 4px;
   background: #2a68ff;
+}
+
+.valuecard{
+  background-image: url(./Assets/Images/ValueBG.jpg);
+  background-size: 200px;
 }

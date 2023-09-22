@@ -6,10 +6,12 @@ export default {
   ],
   theme: {
     extend: {
-      'blueColor' : '#2a68ff',
-      'grey' : '#f1f4f8',
-      'cardShadow' : '#f7f8f9',
-      'cardShadow' : '#252b36',
+      colors:{
+        'blueColor' : '#2a68ff',
+        'grey' : '#f1f4f8',
+        'cardShadow' : '#f7f8f9',
+        'cardShadow' : '#252b36',
+      }
     },
   },
   plugins: [],

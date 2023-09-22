@@ -5,7 +5,7 @@ const Value = () => {
   return (
     <section className='Value' >
       <p className='text-center py-10 text-xl font-bold md:py-20' >The Value that hold us true and to account</p>
-      <div className="grid sm:grid-cols-3 items-center justify-center scroll pb-10 sm:pb-20">
+      <div className="grid sm:grid-cols-3 items-center justify-center pb-10 sm:pb-16">
         {ValuesData.slice(0, 3).map((ValuesData) => {
           let colorclass = null;
           let imgbgclass = null;
@@ -37,6 +37,16 @@ const Value = () => {
             </div>
           )
         })}
+        <div className="valuecard my-10 bg-blueColor flex flex-wrap gap-10 justify-between items-center rounded-xl p-8 md:mt-20 md:mb-8 sm:p-16 sm:col-span-3 bg-cover">
+          <div className="left">
+            <p className='text-blueColor font-extrabold text-2xl mb-3'>Ready to switch a carrer? </p>
+            <p className='font-extrabold text-2xl ' >Let's Get Started ! </p>
+          </div>
+          <div className="right">
+            <button className='border-2 border-blueColor rounded-lg text-lg font-semibold px-8 py-5 text-blueColor hover:bg-white hover:text-black ' >Get Started</button>
+          </div>
+        </div>
+
       </div>
 
     </section>
