@@ -3,6 +3,8 @@ import { navLinks } from '../../Constants'
 
 const Navbar = () => {
   return (
+    <section className='Navbar' >
+
     <div className=' w-full navbar flex justify-between items-center pt-8 pb-8'>
       <div className="text-xl ">
         <a href="/">
@@ -22,6 +24,7 @@ const Navbar = () => {
         <div className="h-[3px] bg-black w-8"></div>
       </div>
     </div>
+    </section>
   )
 }
 

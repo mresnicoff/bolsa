@@ -5,6 +5,7 @@ import { sortby, level, type } from '../../Constants'
 
 const Search = () => {
   return (
+    <section className='Search' >
     <div className='grid gap-9 bg-[#d4d7da] rounded-[10px] p-[3rem] ' >
       <form action="">
         <div className="flex flex-wrap w-full justify-between items-center rounded-lg gap-[20px] bg-white p-5 shadow-lg shadow-grey-700 ">
@@ -26,7 +27,6 @@ const Search = () => {
           <button className='bg-[#2a68ff] flex-grow shrink text-white max-w-full p-3 px-10 rounded-[10px] w-30 hover:bg-blue-500 '>Search</button>
         </div>
       </form>
-
       <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
         <div className="flex  items-center gap-4">
           <label htmlFor="relevance" className='font-semibold text-[#6f6f6f]' >Sort By:</label>
@@ -58,8 +58,8 @@ const Search = () => {
         </div>
         <button className='hover:text-[#2a68ff] text-[#6f6f6f] text-md px-2 py-2' >Clear All</button>
       </div>
-
     </div>
+    </section>
   )
 }
 

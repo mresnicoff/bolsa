@@ -5,6 +5,7 @@ import { JobsData } from '../../Constants'
 const Jobs = () => {
 
   return (
+    <section id='jobs' >
     <div className="flex gap-10 justify-center flex-wrap items-center py-10">
       {JobsData.slice(0,8).map((job) => {
         return (
@@ -28,7 +29,6 @@ const Jobs = () => {
         )
       })}
 
-
       {/* <div className='group w-[250px] p-[20px] mt-4 bg-white rounded-md  shadow-lg shadow-gray-400 hover:bg-[#2a68ff]' >
         <div className="upperpart flex justify-between items-center" >
           <div className="titlecountry">
@@ -47,6 +47,7 @@ const Jobs = () => {
         <button className='border-[2px] font-medium rounded-[10px] block p-2 w-full hover:bg-white group-hover:text-black ]'>Apply Now</button>
       </div> */}
     </div>
+    </section>
   )
 }
 
