@@ -4,8 +4,8 @@ import { ValuesData } from '../../Constants'
 const Value = () => {
   return (
     <section className='Value' >
-      <p className='text-center py-10 text-xl font-bold' >The Value that hold us true and to account</p>
-      <div className="grid sm:grid-cols-3 items-center justify-center">
+      <p className='text-center py-10 text-xl font-bold md:py-20' >The Value that hold us true and to account</p>
+      <div className="grid sm:grid-cols-3 items-center justify-center scroll pb-10 sm:pb-20">
         {ValuesData.slice(0, 3).map((ValuesData) => {
           let colorclass = null;
           let imgbgclass = null;
