@@ -1,7 +1,7 @@
 import Footer from "./Footer/Footer";
 import Jobs from "./Job/Jobs";
-import Navbar from "./Navbar/Navbar";
+import Header from "./Header/Header";
 import Search from "./Search/Search";
 import Value from "./Value/Value";
 
-export{Footer,Navbar,Jobs,Search,Value}
+export{Footer,Header,Jobs,Search,Value}

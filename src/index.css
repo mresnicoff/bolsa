@@ -1,28 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  font-family: 'Poppins', sans-serif;
+:root {
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: white;
 }
 
-li{
+li {
   position: relative;
   list-style: none;
   cursor: pointer;
 }
 
-li>a:hover::before{
+li > a:hover::before {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -32,7 +31,7 @@ li>a:hover::before{
   background: #2a68ff;
 }
 
-.valuecard{
+.valuecard {
   background-image: url(./Assets/Images/ValueBG.jpg);
   background-size: 200px;
 }
