@@ -8,9 +8,8 @@ const Jobs = () => {
       <div className="flex gap-10 justify-center flex-wrap items-center py-5 sm:py-10">
         {JobsData.slice(0, 8).map((job) => {
           return (
-            <div
-              key={job.id}
-              className="flex-grow group flex flex-col justify-between h-[300px] w-[250px] p-3 md:p-[20px] mt-4 bg-white rounded-md  shadow-lg shadow-gray-400 hover:bg-[#2a68ff] dark:bg-slate-700 dark:shadow-none "
+            <div key={job.id}
+              className="flex-grow group flex flex-col justify-between h-[300px] w-[250px] p-3 md:p-[20px] mt-4 bg-white rounded-md shadow-lg shadow-gray-400 dark:hover:bg-blueColor hover:bg-[#2a68ff] dark:bg-slate-700 dark:shadow-none "
             >
               <div className="upperpart flex justify-between items-center">
                 <div className="titlecountry flex-grow">
@@ -42,7 +41,7 @@ const Jobs = () => {
                   </p>
                 </div>
               </div>
-              <button className="border-[2px] font-medium rounded-[10px] block p-2 w-full   dark:text-slate-100 dark:bg-blueColor dark:border-transparent dark:group-hover:border dark:group-hover:border-white dark:hover:text-blueColor hover:bg-white">
+              <button className="border-[2px] font-medium rounded-[10px] block p-2 w-full dark:text-slate-100 dark:bg-blueColor dark:border-transparent dark:group-hover:border dark:group-hover:border-white dark:hover:text-blueColor dark:hover:bg-white hover:bg-white">
                 Apply Now
               </button>
             </div>

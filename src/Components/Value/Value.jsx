@@ -7,13 +7,13 @@ const Value = () => {
       <p className="text-center py-10 text-xl font-bold md:py-20 dark:text-white">
         The Value that hold us true and to account
       </p>
-      <div className="grid sm:grid-cols-3 gap-4 items-center justify-center pb-10 sm:pb-16">
+      <div className="grid sm:grid-cols-3 gap-10 sm:gap-4 items-center justify-center pb-10 sm:pb-16">
         {ValuesData.slice(0, 3).map((ValuesData) => {
           let colorclass = null;
           let imgbgclass = null;
-          const bg1 = "hover:bg-[#eeedf7]";
-          const bg2 = "hover:bg-[#fcfae3]";
-          const bg3 = "hover:bg-[#f7edf5]";
+          const bg1 = "hover:bg-[#eeedf7] dark:hover:bg-[#eeedf7]";
+          const bg2 = "hover:bg-[#fcfae3] dark:hover:bg-[#fcfae3]";
+          const bg3 = "hover:bg-[#f7edf5] dark:hover:bg-[#f7edf5]"; 
           const imgbg1 = "bg-[#dedef8]";
           const imgbg2 = "bg-[#f3f2ad]";
           const imgbg3 = "bg-[#f7d1e1]";
@@ -30,9 +30,7 @@ const Value = () => {
           return (
             <div
               key={ValuesData.id}
-              className={`flex h-40 sm:h-52 flex-col rounded-xl p-4 lg:p-8 ${
-                colorclass ? colorclass : ""
-              } dark:bg-slate-600 dark:text-slate-50 dark:hover:text-black`}
+              className={`flex h-40 sm:h-52 flex-col rounded-xl p-4 lg:p-8 ${colorclass ? colorclass : ""} dark:bg-slate-600 dark:text-slate-50 dark:hover:text-black`}
             >
               <div className="flex gap-3 items-center">
                 <div className={`rounded-xl p-3 ${imgbgclass}`}>
