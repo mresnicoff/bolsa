@@ -14,9 +14,9 @@ const Header = () => {
           <a href="/">
             <h1 className="font-medium dark:text-white">
               <strong className="text-[#2a68ff] font-extrabold mr-0.5">
-                Job
+                Bolsa
               </strong>
-              Portal
+              de Trabajos
             </h1>
           </a>
         </div>

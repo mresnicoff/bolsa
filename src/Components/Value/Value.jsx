@@ -5,10 +5,10 @@ const Value = () => {
   return (
     <section className="Value">
       <p className="text-center py-10 text-xl font-bold md:py-20 dark:text-white">
-        The Value that hold us true and to account
+        El valor que nos mantiene sinceros y a tener en cuenta
       </p>
       <div className="grid sm:grid-cols-3 gap-10 sm:gap-4 items-center justify-center pb-10 sm:pb-16">
-        {ValuesData.slice(0, 3).map((ValuesData) => {
+        {ValuesData.slice(0, 8).map((ValuesData) => {
           let colorclass = null;
           let imgbgclass = null;
           const bg1 = "hover:bg-[#eeedf7] dark:hover:bg-[#eeedf7]";
@@ -49,13 +49,13 @@ const Value = () => {
         <div className="valuecard my-10 bg-blueColor flex flex-wrap gap-10 justify-between items-center rounded-xl p-8 md:mt-20 md:mb-8 sm:p-16 sm:col-span-3 bg-cover">
           <div className="left">
             <p className="text-blueColor font-extrabold text-2xl mb-3">
-              Ready to switch a carrer?{" "}
+              Listo para cambiar de carrera?{" "}
             </p>
-            <p className="font-extrabold text-2xl ">Let's Get Started ! </p>
+            <p className="font-extrabold text-2xl ">Empecemos ! </p>
           </div>
           <div className="right">
             <button className="border-2 border-blueColor rounded-lg text-lg font-semibold px-8 py-5 text-blueColor hover:bg-white hover:text-black ">
-              Get Started
+              Para empezar
             </button>
           </div>
         </div>

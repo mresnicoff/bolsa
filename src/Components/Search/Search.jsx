@@ -17,7 +17,7 @@ const Search = () => {
               <AiOutlineSearch className="icon mr-1 dark:invert" />
               <input
                 className="bg-transparent w-full text-blue-600 focus:outline-none font-medium dark:text-white"
-                placeholder="Search Job..."
+                placeholder="Buscar trabajo..."
                 type="text"
               />
               <AiFillCloseCircle className="text-lg text-[#a5a6a6] hover:text-black hover:dark:invert" />
@@ -26,7 +26,7 @@ const Search = () => {
               <AiOutlineHome className="icon mr-1 dark:invert" />
               <input
                 className="bg-transparent w-full text-blue-600 focus:outline-none font-medium dark:text-white"
-                placeholder="Search Company..."
+                placeholder="Buscar empresa..."
                 type="text"
               />
               <AiFillCloseCircle className="text-lg text-[#a5a6a6] hover:text-black hover:dark:invert" />
@@ -35,13 +35,13 @@ const Search = () => {
               <GoLocation className="icon mr-1 dark:invert" />
               <input
                 className="bg-transparent w-full text-blue-600 focus:outline-none font-medium dark:text-white"
-                placeholder="Search Location..."
+                placeholder="Buscar Ubicación..."
                 type="text"
               />
               <AiFillCloseCircle className="text-lg text-[#a5a6a6] hover:text-black hover:dark:invert" />
             </div>
             <button className="bg-[#2a68ff] flex-grow shrink text-white max-w-full p-3 px-10 rounded-[10px] w-30 hover:bg-blue-500 ">
-              Search
+              Buscar
             </button>
           </div>
         </form>
@@ -51,7 +51,7 @@ const Search = () => {
               htmlFor="relevance"
               className="font-semibold text-[#6f6f6f] dark:text-white"
             >
-              Sort By:
+              Ordenado por:
             </label>
             <select
               className="outline-none bg-white rounded-md px-4 py-1 dark:bg-slate-600 dark:text-white "
@@ -70,7 +70,7 @@ const Search = () => {
               htmlFor="type"
               className="font-semibold text-[#6f6f6f] dark:text-white"
             >
-              Type:
+              Tipo:
             </label>
             <select
               className="outline-none bg-white rounded-md px-4 py-1 dark:bg-slate-600 dark:text-white "
@@ -89,7 +89,7 @@ const Search = () => {
               htmlFor="level"
               className="font-semibold text-[#6f6f6f] dark:text-white"
             >
-              Level:
+              Nivel:
             </label>
             <select
               className="outline-none bg-white rounded-md px-4 py-1 dark:bg-slate-600 dark:text-white "
@@ -104,7 +104,7 @@ const Search = () => {
             </select>
           </div>
           <button className="hover:text-[#2a68ff] text-[#6f6f6f] text-md px-2 py-2 dark:text-white">
-            Clear All
+            Borrar Todo
           </button>
         </div>
       </div>

@@ -12,63 +12,62 @@ const Footer = () => {
         <div>
           <a href="/">
             <h1 className="text-lg font-medium text-white pb-2">
-              <strong className="text-white font-extrabold mr-0.5">Job</strong>
-              Portal
+              <strong className="text-white font-extrabold mr-0.5">Bolsa</strong>
+              de Trabajos
             </h1>
           </a>
           <p className="text-white text-sm font-thin leading-6 opacity-90 text-start">
-            We always make our seekers and companies find the best jobs and
-            employers find the best candidates
+            Siempre hacemos que nuestros candidatos consigan su empleo ideal y que las empresas que publican consigan el candidato justo.
           </p>
         </div>
         <div className="flex flex-col gap-2 sm:gap-3">
-          <span className="text-base font-semibold text-white">Company</span>
+          <span className="text-base font-semibold text-white">Empresa</span>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            About Us
+            Acerca
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            Features
+            Características
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            News
+            Noticias
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            FAQ
+            FAQs
           </li>
         </div>
         <div className="flex flex-col gap-2 sm:gap-3">
-          <span className="text-base font-semibold text-white">Resources</span>
+          <span className="text-base font-semibold text-white">Recursos</span>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            Account
+            Cuenta
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            Support Center
+            Centro de Ayuda
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
             Feedback
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            Contact Us
+            Contacto
           </li>
         </div>
         <div className="flex flex-col gap-2 sm:gap-3">
-          <span className="text-base font-semibold text-white">Support</span>
+          <span className="text-base font-semibold text-white">Ayuda</span>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            Events
+            Eventos
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            Promo
+            Promos
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
             Demo
           </li>
           <li className="text-white opacity-75 font-thin text-sm leading-6 hover:opacity-100">
-            Careers
+            Carreras
           </li>
         </div>
         <div className="flex flex-col gap-2 col-span-2 sm:col-auto sm:gap-3">
           <span className="text-base font-semibold text-white ">
-            Contact Info
+            Info de Contacto
           </span>
           <a
             className="text-white opacity-80 hover:opacity-100 text-xs lg:text-sm"
