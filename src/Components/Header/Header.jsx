@@ -1,6 +1,7 @@
 import React from "react";
 import { navLinks } from "../../Constants";
 import { MdLightMode } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const toggleTheme = () =>{
@@ -9,7 +10,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className=" w-full Header flex justify-between items-center pt-8 pb-8">
+      <nav className=" w-full Header flex justify-between items-center pt-8 pb-8  dark:bg-slate-800">
         <div className="text-xl ">
           <a href="/">
             <h1 className="font-medium dark:text-white">
@@ -26,7 +27,7 @@ const Header = () => {
               className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
               key={li.label}
             >
-              <a href={li.href}>{li.label}</a>
+              <Link to={li.href}>{li.label}</Link>
             </li>
           ))}
           <MdLightMode onClick={toggleTheme} className="dark:invert cursor-pointer ml-4 h-5 w-full" />
