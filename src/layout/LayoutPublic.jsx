@@ -6,6 +6,7 @@ const LayoutPublic = () => {
     const navigation = useNavigation();
 
     return (
+
         <div>
             <Header/>
             <main >

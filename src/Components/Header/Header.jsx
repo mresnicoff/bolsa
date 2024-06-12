@@ -1,13 +1,13 @@
 import React from "react";
-import { navLinks } from "../../Constants";
 import { MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
+import {useAuthContext} from '../../auth/authContext'
 
 const Header = () => {
   const toggleTheme = () =>{
     document.documentElement.classList.toggle("dark")
   }
-
+  const {isAuthenticated} = useAuthContext();
   return (
     <header>
       <nav className=" w-full Header flex justify-between items-center pt-8 pb-8  dark:bg-slate-800">
@@ -22,14 +22,39 @@ const Header = () => {
           </a>
         </div>
         <ul className="hidden sm:flex items-center gap-2">
-          {navLinks.map((li) => (
+
+        <li
+              className="text-[#6f6f6f] dark:text-slate-100"
+              key="login">{!isAuthenticated ? <Link to="Login">Login</Link>:<p className="cursor-default whitespace-nowrap">Hola Martin</p>}
+
+        </li>
+
+        {isAuthenticated && <li
+              className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
+              key="salir"> <Link to="Logout">Salir</Link>
+
+            </li>}
+      
             <li
               className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
-              key={li.label}
-            >
-              <Link to={li.href}>{li.label}</Link>
+              key="acerca"> <Link to="About">Acerca</Link>
+
             </li>
-          ))}
+            <li
+              className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
+              key="contacto"> <Link to="Contacto">Contacto</Link>
+
+            </li>
+           {!isAuthenticated && <li
+              className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
+              key="Registrarse"> <Link to="/Registrarse">Registrarse</Link>
+
+            </li>}
+
+
+    
+            
+      
           <MdLightMode onClick={toggleTheme} className="dark:invert cursor-pointer ml-4 h-5 w-full" />
         </ul>
         <div className="absolute right-20">
