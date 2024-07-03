@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import App from "../../App"
 
 function Login() {
+  const {login}= useAuthContext();
   const myData=useActionData()
   useEffect(() => {
     if (myData && myData.ok){login()
@@ -11,7 +12,7 @@ function Login() {
     }
 console.log(myData)
   }, [myData])
-const {login}= useAuthContext();
+
 
 useEffect
   return (<>

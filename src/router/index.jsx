@@ -3,6 +3,7 @@ import App from "../App.jsx";
 import About from "../Components/About/About.jsx";
 import Logout from "../Components/Logout/Logout.jsx";
 import Login, { loginAction } from "../Components/Login/Login.jsx";
+import Register from "../Components/register/Register.jsx";
 import LayoutPublic from "../layout/LayoutPublic.jsx";
 
 export const router = createBrowserRouter([
@@ -26,6 +27,11 @@ export const router = createBrowserRouter([
             path: "/login",
             element: <Login />,
             action:loginAction
+        },
+        {
+            path: "/registrarse",
+            element: <Register />,
+    
         },
 
         ],

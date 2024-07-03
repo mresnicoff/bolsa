@@ -29,7 +29,7 @@ const handleNextPage = () => {
       <div className="flex gap-10 justify-center flex-wrap items-center py-5 sm:py-10">
         {JobsData.slice((currentPage - 1) * 8, Math.min((currentPage - 1) * 8 + 8, 10)).map((job) => {
           return (
-<Job key={job.id} id={job.id} title={job.title} location={job.location} time={Job.time} desc={job.desc} logo={job.logo} company={job.company}/>
+<Job key={job.id} id={job.id} title={job.title} location={job.location} time={job.time} desc={job.desc} logo={job.logo} company={job.company}/>
           );
         })}
       </div>

@@ -25,7 +25,7 @@ const Header = () => {
 
         <li
               className="text-[#6f6f6f] dark:text-slate-100"
-              key="login">{!isAuthenticated ? <Link to="Login">Login</Link>:<p className="cursor-default whitespace-nowrap">Hola Martin</p>}
+              key="login">{!isAuthenticated ? <Link to="Login">Login</Link>:<p className="cursor-default whitespace-nowrap">Hola {user.name}</p>}
 
         </li>
 
@@ -47,7 +47,7 @@ const Header = () => {
             </li>
            {!isAuthenticated && <li
               className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
-              key="Registrarse"> <Link to="/Registrarse">Registrarse</Link>
+              key="Registrarse"> <Link to="/registrarse">Registrarse</Link>
 
             </li>}
 
