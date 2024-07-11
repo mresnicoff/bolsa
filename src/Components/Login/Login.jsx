@@ -7,17 +7,18 @@ function Login() {
   const {login}= useAuthContext();
   const myData=useActionData()
   useEffect(() => {
-    if (myData && myData.ok){login()
+    console.log(myData)
+    if (myData && myData.ok && myData.ok!=="puede logearse"){login(myData.email, myData.password)
     
     }
-console.log(myData)
+
   }, [myData])
 
 
 useEffect
   return (<>
  
-{!myData ?<Form method="post" action="/login">
+{!myData || myData.ok=="puede logearse" ?<Form method="post" action="/login">
 <div class="grid gap-6 mb-6 md:grid-cols-2 w-3/5 text-center">
 <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
 
@@ -38,11 +39,10 @@ export default Login;
 export const loginAction=async({request})=>{
 
     const data = await request.formData()
-console.log(request)
 const envio={
     email:data.get('email'),
     password:data.get('password')
  
 }
 
-return {ok:"puede logearse"}}
+return {ok:"logueado con éxito", email:envio.email, password:envio.password}}

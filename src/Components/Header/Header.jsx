@@ -7,7 +7,7 @@ const Header = () => {
   const toggleTheme = () =>{
     document.documentElement.classList.toggle("dark")
   }
-  const {isAuthenticated} = useAuthContext();
+  const {user} = useAuthContext();
   return (
     <header>
       <nav className=" w-full Header flex justify-between items-center pt-8 pb-8  dark:bg-slate-800">
@@ -25,11 +25,11 @@ const Header = () => {
 
         <li
               className="text-[#6f6f6f] dark:text-slate-100"
-              key="login">{!isAuthenticated ? <Link to="Login">Login</Link>:<p className="cursor-default whitespace-nowrap">Hola {user.name}</p>}
+              key="login">{!user.isAuthenticated ? <Link to="Login">Login</Link>:<p className="cursor-default whitespace-nowrap">Hola {user.name}</p>}
 
         </li>
 
-        {isAuthenticated && <li
+        {user.isAuthenticated && <li
               className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
               key="salir"> <Link to="Logout">Salir</Link>
 
@@ -45,7 +45,7 @@ const Header = () => {
               key="contacto"> <Link to="Contacto">Contacto</Link>
 
             </li>
-           {!isAuthenticated && <li
+           {!user.isAuthenticated && <li
               className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
               key="Registrarse"> <Link to="/registrarse">Registrarse</Link>
 
