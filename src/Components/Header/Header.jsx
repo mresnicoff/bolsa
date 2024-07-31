@@ -28,6 +28,11 @@ const Header = () => {
               key="login">{!user.isAuthenticated ? <Link to="Login">Login</Link>:<p className="cursor-default whitespace-nowrap">Hola {user.name}</p>}
 
         </li>
+        {user.isAuthenticated && <li
+              className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"
+              key="post"> <Link to="Post">Post</Link>
+
+            </li>}
 
         {user.isAuthenticated && <li
               className="text-[#6f6f6f] dark:text-slate-100 text-base hover:text-[#2a68ff]"

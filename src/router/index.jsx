@@ -5,6 +5,8 @@ import Logout from "../Components/Logout/Logout.jsx";
 import Login, { loginAction } from "../Components/Login/Login.jsx";
 import Register, {registerAction} from "../Components/Register/Register.jsx";
 import LayoutPublic from "../layout/LayoutPublic.jsx";
+import Post from "../Components/Post/Post.jsx";
+import { postAction } from "../Components/Post/Post.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +34,12 @@ export const router = createBrowserRouter([
             path: "/registrarse",
             element: <Register />,
             action:registerAction
+    
+        },
+        {
+            path: "/post",
+            element: <Post />,
+            action:postAction
     
         },
 
