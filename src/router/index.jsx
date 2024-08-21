@@ -7,6 +7,7 @@ import Register, {registerAction} from "../Components/Register/Register.jsx";
 import LayoutPublic from "../layout/LayoutPublic.jsx";
 import Post from "../Components/Post/Post.jsx";
 import { postAction } from "../Components/Post/Post.jsx";
+import { appLoader } from "../Constants/index.js";
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <App />,
+                loader:appLoader
             },
             {
                 path: "/about",

@@ -1,6 +1,6 @@
 import { logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8 } from '../Assets/Logo/index'
 import {Image1,Image2,Image3} from '../Assets/Images'
-
+import axios from 'axios';
 export const navLinks = [
     { href: "/", label: "Empleos" },
     { href: "#companies", label: "Empresas" },
@@ -12,10 +12,9 @@ export const navLinks = [
 ];
 
 export const sortby = [
-    { id: 1, value: "Relevancia" },
-    { id: 2, value: "Inclusivo" },
-    { id: 3, value: "Puntuación" },
-    { id: 4, value: "Contenido" }
+    { id: 1, value: "Fecha" },
+    { id: 2, value: "Localidad" },
+
 ];
 
 export const type = [
@@ -147,3 +146,24 @@ export const JobsData = [
         company: "Uranas Tech Pvt. Ltd"
     },
 ]
+
+export const appLoader=async()=>{
+    var ok
+  
+  
+
+
+
+   const response=await axios.get(`http://localhost:3001/posts`)
+
+   console.log(response)
+   return response
+
+
+  }
+ 
+  
+  
+  
+  
+
