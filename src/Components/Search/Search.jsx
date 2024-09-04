@@ -9,13 +9,24 @@ import { GoLocation } from "react-icons/go";
 import { sortby} from "../../Constants";
 
 const Search = () => {
-  const {sorted, sorter}= useAuthContext();
+  const {sorted, sorter, filter, appliedFilter}= useAuthContext();
   const [claveOrdenar, setClaveOrdenar] =React.useState(sorted) 
+  const [filtro, setFiltro] =React.useState(filter) 
   const ordenar=(e)=>
     { setClaveOrdenar( e.target.value )
       sorter(e.target.value)
       console.log(e.target.value)
  }
+ const filtrar=(e)=>
+  { setFiltro({
+    ...filtro, 
+    [e.target.name]: e.target.value
+  });
+  appliedFilter({
+  ...filtro, 
+  [e.target.name]: e.target.value
+})
+}
   return (
     <section className="Search">
       <div className="grid gap-9 bg-[#d4d7da] rounded-[10px] p-[1rem] md:p-[3rem] dark:bg-slate-700 ">
@@ -27,6 +38,9 @@ const Search = () => {
                 className="bg-transparent w-full text-blue-600 focus:outline-none font-medium dark:text-white"
                 placeholder="Buscar titulo..."
                 type="text"
+                name="titulo"
+                onChange={filtrar}
+                value={filtro.titulo}
               />
               <AiFillCloseCircle className="text-lg text-[#a5a6a6] hover:text-black hover:dark:invert" />
             </div>
@@ -36,6 +50,9 @@ const Search = () => {
                 className="bg-transparent w-full text-blue-600 focus:outline-none font-medium dark:text-white"
                 placeholder="Buscar empresa..."
                 type="text"
+                name="empresa"
+                onChange={filtrar}
+                value={filtro.empresa}
               />
               <AiFillCloseCircle className="text-lg text-[#a5a6a6] hover:text-black hover:dark:invert" />
             </div>
@@ -45,12 +62,13 @@ const Search = () => {
                 className="bg-transparent w-full text-blue-600 focus:outline-none font-medium dark:text-white"
                 placeholder="Buscar Ubicación..."
                 type="text"
+                name="ubicacion"
+                onChange={filtrar}
+                value={filtro.ubicacion}
               />
               <AiFillCloseCircle className="text-lg text-[#a5a6a6] hover:text-black hover:dark:invert" />
             </div>
-            <button className="bg-[#2a68ff] flex-grow shrink text-white max-w-full p-3 px-10 rounded-[10px] w-30 hover:bg-blue-500 ">
-              Buscar
-            </button>
+
           </div>
         </form>
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">

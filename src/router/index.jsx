@@ -6,8 +6,10 @@ import Login, { loginAction } from "../Components/Login/Login.jsx";
 import Register, {registerAction} from "../Components/Register/Register.jsx";
 import LayoutPublic from "../layout/LayoutPublic.jsx";
 import Post from "../Components/Post/Post.jsx";
+import Postularse from "../Components/Postularse/Postularse.jsx";
 import { postAction } from "../Components/Post/Post.jsx";
-import { appLoader } from "../Constants/index.js";
+import { appLoader, postularseLoader} from "../Constants/index.js";
+import { sendEmail } from "../Components/Postularse/Postularse.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +44,13 @@ export const router = createBrowserRouter([
             path: "/post",
             element: <Post />,
             action:postAction
+    
+        },
+        {
+            path: "/postularse/:id",
+            element: <Postularse />,
+            loader:postularseLoader,
+            action:sendEmail
     
         },
 

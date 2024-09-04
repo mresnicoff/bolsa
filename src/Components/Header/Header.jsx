@@ -9,6 +9,7 @@ const Header = () => {
   }
   const {user} = useAuthContext();
   return (
+
     <header>
       <nav className=" w-full Header flex justify-between items-center pt-8 pb-8  dark:bg-slate-800">
         <div className="text-xl ">

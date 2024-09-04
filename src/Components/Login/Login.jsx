@@ -9,9 +9,8 @@ function Login() {
 
 if(myData && myData.ok=="logueado con éxito" && user.isAuthenticated==false){
 
-
- login(myData.name)
-
+console.log("HOla",myData.empresa)
+ login(myData.name, myData.empresa)
 return <Navigate to={"/"} />
 }
  
@@ -42,7 +41,7 @@ return <Navigate to={"/"} />
 export default Login;
 
 export const loginAction=async({request})=>{
-var ok, name
+var ok, name, empresa
     const data = await request.formData()
 const envio={
     email:data.get('email'),
@@ -53,8 +52,9 @@ try{
      const respuesta= await axios.get(`http://localhost:3001/usuarios/?email=${envio.email}&password=${envio.password}`)
     ok="logueado con éxito"
     name=respuesta.data.nombre
+    empresa=respuesta.data.empresa
     }
 catch{
   ok="error en logueo"
 }
-return {ok, name}}
+return {ok, name, empresa}}

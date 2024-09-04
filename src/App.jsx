@@ -1,13 +1,10 @@
 import React from "react";
 import {Jobs, Search, Value } from "./Components";
 import {useLoaderData} from "react-router-dom";
-import { useEffect } from "react";
 
 const App = () => {
   const  jobsData  = useLoaderData().data  
-  useEffect(() => {
 
-  }, [])
 
   return (
     <div className="w-full dark:bg-slate-800">

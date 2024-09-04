@@ -7,16 +7,17 @@ export const AuthContext = createContext();
 export default function AuthContextProvider({children}) {
  // const [isAuthenticated, setIsAuthenticated] = useState(() =>
  //   window.localStorage.getItem(MY_AUTH_APP))
- const [user, setUser] = useState({name:"Visitor",isAuthenticated:false})
- const [filter, setFilter] = useState({localidad:"all",tima:"all"})
+ const [user, setUser] = useState({name:"Visitor",isAuthenticated:false, empresa:"Sin"})
+ const [filter, setFilter] = useState({ubicacion:"",empresa:"", titulo:""})
  const [sorted, setSorted] = useState("Fecha")
   ;
 
-  const login = useCallback(function (aName) {
+  const login = useCallback(function (aName, empresa) {
+    console.log("context",empresa)
     window.localStorage.setItem(user, MY_AUTH_APP);
     setUser((prevState) => ({
       ...prevState,
-      name: aName,isAuthenticated:true
+      name: aName,isAuthenticated:true, empresa:empresa
     }))
   }, []);
 
@@ -30,12 +31,10 @@ export default function AuthContextProvider({children}) {
     }))
   }, []);
 
-  const  appliedFilter= useCallback(function (localidad, momento) {
+  const  appliedFilter= useCallback(function (miFiltro) {
     window.localStorage.removeItem(MY_AUTH_APP);
-    setFilter((prevState) => ({
-      ...prevState,
-      localidad: localidad ,momento:momento
-    }))
+    setFilter(miFiltro)
+    console.log(miFiltro)
   }, []);
 
   const  sorter= useCallback(function (ordenador) {

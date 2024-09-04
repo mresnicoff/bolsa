@@ -161,6 +161,21 @@ export const appLoader=async()=>{
 
 
   }
+
+  export const postularseLoader=async({params})=>{
+
+  
+  
+
+
+
+   const response=await axios.get(`http://localhost:3001/posts/${params.id}`)
+
+   console.log(response)
+   return response
+
+
+  }
  
   
   
