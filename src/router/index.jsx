@@ -49,8 +49,9 @@ export const router = createBrowserRouter([
         {
             path: "/postularse/:id",
             element: <Postularse />,
+            action:sendEmail,
             loader:postularseLoader,
-            action:sendEmail
+  
     
         },
 
